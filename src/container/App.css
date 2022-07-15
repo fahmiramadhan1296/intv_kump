@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+#container {
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.post-container {
+  width: 100%;
+  background-color: burlywood;
+}
