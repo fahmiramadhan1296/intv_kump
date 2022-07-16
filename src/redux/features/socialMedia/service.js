@@ -23,6 +23,14 @@ export const socialMediaApi = createApi({
     getPhoto: builder.query({
       query: ({ albumId }) => `${API.PHOTO}?albumId=${albumId}`,
     }),
+    addPostAndAlbum: builder.mutation({
+      query: ({ type, body }) => ({
+        url: `${API[type]}`,
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: [{ type: "Post", id: "LIST" }],
+    }),
   }),
 });
 
